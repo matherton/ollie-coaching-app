@@ -1,7 +1,8 @@
 <template>
   <v-app>
     <v-main>
-      <HelloWorld />
+      <HeroSlideTransition />
+      <!-- <HelloWorld /> -->
       <v-btn
         class="m-2"
         icon="mdi-theme-light-dark"
@@ -14,5 +15,6 @@
 </template>
 
 <script lang="ts" setup>
-  import HelloWorld from '@/components/HelloWorld.vue'
+import HeroSlideTransition from "@/components/HeroSlideTransition.vue";
+// import HelloWorld from "@/components/HelloWorld.vue";
 </script>
