@@ -2,7 +2,8 @@
 import { ref, onMounted, onBeforeUnmount } from "vue";
 import { createVNode as _c } from "vue";
 
-import cumbiatonesElruedo from "../../assets/slider-imgs/cumbiatones+elruedo.webp";
+import ollieHeader from "@/assets/ollieHeader.png";
+//import cumbiatonesElruedo from "../../assets/slider-imgs/cumbiatones+elruedo.webp";
 import chillitunes from "../../assets/slider-imgs/chilli-tunes.webp";
 import chocesspresso from "../../assets/slider-imgs/choc-esspresso.webp";
 import dodgykrugerrands from "../../assets/slider-imgs/dodgykrugerrands.webp";
@@ -88,6 +89,7 @@ onBeforeUnmount(() => {
 </script>
 
 <template>
+  <img :src="ollieHeader" alt="Ollie SK8 coaching" class="logo" />
   <div class="relative w-full h-full overflow-hidden">
     <div
       class="flex transition-transform duration-500 ease-in-out h-full"
@@ -166,6 +168,15 @@ onBeforeUnmount(() => {
 </template>
 
 <style scoped>
+.logo {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  width: 50%;
+  height: auto;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+}
 /* Ensure each slide fills the container */
 .w-full {
   width: 100%;
