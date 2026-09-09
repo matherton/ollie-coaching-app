@@ -1,6 +1,7 @@
 <template>
   <v-app>
     <v-main>
+      <TopMenu /><!--:slots="['About', 'Booking', 'Q+A', 'Reviews']" -->
       <HeroSlideTransition />
       <!-- <HelloWorld /> -->
       <v-btn
@@ -16,5 +17,6 @@
 
 <script lang="ts" setup>
 import HeroSlideTransition from "@/components/HeroSlideTransition.vue";
+import TopMenu from "@/components/TopMenu.vue";
 // import HelloWorld from "@/components/HelloWorld.vue";
 </script>

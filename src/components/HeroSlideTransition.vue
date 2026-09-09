@@ -176,8 +176,8 @@ onBeforeUnmount(() => {
 
 <style scoped>
 .logo {
-  position: fixed;
-  top: 0;
+  position: absolute;
+  top: 3%;
   left: 50%;
   transform: translateX(-50%);
   z-index: 10;
