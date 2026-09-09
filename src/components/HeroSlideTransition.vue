@@ -4,33 +4,32 @@ import { createVNode as _c } from "vue";
 
 import ollieHeader from "@/assets/ollieHeader.png";
 //import cumbiatonesElruedo from "../../assets/slider-imgs/cumbiatones+elruedo.webp";
+import skateboard from "@/assets/skateboard.jpg";
 import chillitunes from "../../assets/slider-imgs/chilli-tunes.webp";
 import chocesspresso from "../../assets/slider-imgs/choc-esspresso.webp";
 import dodgykrugerrands from "../../assets/slider-imgs/dodgykrugerrands.webp";
-const screenOne = _c("div", {
-  staticClass: "flex flex-col items-center justify-center h-full bg-black",
-});
-const images = [chillitunes, screenOne, chocesspresso, dodgykrugerrands];
+
+const images = [chillitunes, skateboard, chocesspresso, dodgykrugerrands];
 const slides = [
   {
-    img: screenOne,
-    title: "Welcome to Ollie's SK8 coaching site",
-    text: "Brief about Ollie and the coaching services offered. This is a placeholder for the first slide.",
+    img: skateboard,
+    title: "",
+    text: "",
   },
   {
     img: chocesspresso,
     title: "",
-    text: "Cocktails",
+    text: "",
   },
   {
     img: chillitunes,
     title: "",
-    text: "Live Music",
+    text: "",
   },
   {
     img: dodgykrugerrands,
     title: "",
-    text: "Cocktails",
+    text: "",
   },
 ];
 const currentIndex = ref(0);
@@ -91,6 +90,14 @@ onBeforeUnmount(() => {
 <template>
   <img :src="ollieHeader" alt="Ollie SK8 coaching" class="logo" />
   <div class="relative w-full h-full overflow-hidden">
+    <section
+      class="text-2xl font-bold text-white absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10"
+    >
+      <p>Brief about Ollie and the coaching services offered...</p>
+      <h1>Reviews</h1>
+      <p>Review from customers</p>
+      <p>Thanks to reviewers</p>
+    </section>
     <div
       class="flex transition-transform duration-500 ease-in-out h-full"
       :style="{ transform: `translateX(-${currentIndex * 100}%)` }"
@@ -169,12 +176,10 @@ onBeforeUnmount(() => {
 
 <style scoped>
 .logo {
-  position: absolute;
-  top: 10%;
+  position: fixed;
+  top: 0;
   left: 50%;
-  width: 50%;
-  height: auto;
-  transform: translate(-50%, -50%);
+  transform: translateX(-50%);
   z-index: 10;
 }
 /* Ensure each slide fills the container */
@@ -182,7 +187,7 @@ onBeforeUnmount(() => {
   width: 100%;
 }
 .h-full {
-  height: 100%;
+  height: 100vh;
 }
 .relative.w-full.h-full.overflow-hidden {
   background: #000; /* or your preferred color */
